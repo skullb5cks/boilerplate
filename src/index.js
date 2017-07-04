@@ -1,7 +1,5 @@
 import Library from '../src/library';
 
-console.log(1);
-
 function component() {
     var element = document.createElement('div');
 
@@ -11,11 +9,20 @@ function component() {
     return element;
 }
 
-document.body.appendChild(component());
+var x = [];
 
-if (module.hot) {
-    module.hot.accept('./library', function() {
-    console.log('Accepting the updated library module!');
-    Library.log();
-  })
+function grow() {
+    console.log(grow);
+  for (var i = 0; i < 10000; i++) {
+    document.body.appendChild(document.createElement('div'));
+  }
+  x.push(new Array(1000000).join('x'));
 }
+
+document.getElementById('grow').addEventListener('click', grow);
+
+
+
+// document.body.appendChild(component());
+
+if (module.hot) module.hot.accept()

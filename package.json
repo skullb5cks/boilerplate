@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack",
-    "start": "webpack-dev-server --env=develop --open",
+    "start": "webpack-dev-server --env=develop --open ",
     "dev": "webpack --env=develop --progress --profile --colors",
     "release": "webpack --env=release --progress --profile --colors"
   },
