@@ -1,28 +1,15 @@
-import Library from '../src/library';
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-function component() {
-    var element = document.createElement('div');
-
-    // Lodash, currently included via a script, is required for this line to work
-    element.innerHTML = ['Hello', 'webpack!!!1'].join(' ');
-
-    return element;
+class World extends React.Component {
+  render() {
+    return <h1>World1</h1>
+  }
 }
 
-var x = [];
+ReactDOM.render(<World/>, document.getElementById('app'));
 
-function grow() {
-    console.log(grow);
-  for (var i = 0; i < 10000; i++) {
-    document.body.appendChild(document.createElement('div'));
-  }
-  x.push(new Array(1000000).join('x'));
+
+if (module.hot) {
+  module.hot.accept();
 }
-
-document.getElementById('grow').addEventListener('click', grow);
-
-
-
-// document.body.appendChild(component());
-
-if (module.hot) module.hot.accept()
