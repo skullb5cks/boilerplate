@@ -1,0 +1,1 @@
+/** * 상태설계, * 이전 상태와 액션을 받아서 다음 상태를 반환 * 결국 reducer가 데이터(객체)를 바꾼다 */import { combineReducers } from 'redux'import todos from './todos'import visibilityFilter from './visibilityFilter'const todoApp = combineReducers({    todos,    visibilityFilter});export default todoApp

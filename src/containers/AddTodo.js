@@ -1,0 +1,1 @@
+import { connect } from 'react-redux'import Add from '../components/Add'const AddTodo = connect()(Add);export default AddTodo;
